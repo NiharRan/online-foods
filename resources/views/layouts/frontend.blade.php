@@ -3,43 +3,54 @@
 @endisset
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-textdirection="{{ env('MIX_CONTENT_DIRECTION') === 'rtl' ? 'rtl' : 'ltr' }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
+    data-textdirection="{{ env('MIX_CONTENT_DIRECTION') === 'rtl' ? 'rtl' : 'ltr' }}">
 
-        <title>@yield('title') - Vuexy Vuejs, HTML & Laravel Admin Dashboard Template</title>
-        <link rel="shortcut icon" type="image/x-icon" href="images/logo/favicon.ico">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        {{-- Include core + vendor Styles --}}
-        @include('panels/styles')
+    <title>@yield('title') - Vuexy Vuejs, HTML & Laravel Admin Dashboard Template</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/favicon.ico">
 
-    </head>
+    {{-- Include core + vendor Styles --}}
+    @include('panels/styles')
+    <style>
+        .ecommerce {
+            flex: 1;
+            margin-left: 30px;
+        }
 
-    {{-- {!! Helper::applClasses() !!} --}}
-    @php
-    $configData = Helper::applClasses();
-    @endphp
+    </style>
+</head>
 
-    <body class="vertical-layout vertical-menu-modern 1-column {{ $configData['blankPageClass'] }} {{ $configData['bodyClass'] }} {{($configData['theme'] === 'light') ? '' : $configData['theme'] }} data-menu="vertical-menu-modern" data-col="1-column"  data-layout="{{ $configData['theme'] }}">
+{{-- {!! Helper::applClasses() !!} --}}
+@php
+$configData = Helper::applClasses();
+@endphp
 
-        <!-- BEGIN: Content-->
-        <div class="app-content content ecommerce-application">
-            <div class="content-wrapper">
-                <div class="content-body">
+<body
+    class="vertical-layout vertical-menu-modern 1-column {{ $configData['blankPageClass'] }} {{ $configData['bodyClass'] }} {{ $configData['theme'] === 'light' ? '' : $configData['theme'] }} data-menu="
+    vertical-menu-modern" data-col="1-column" data-layout="{{ $configData['theme'] }}">
+    <!-- BEGIN: Content-->
+    <div class="app-content content ecommerce-application">
+        @include('panels.frontend.navbar')
+        <div class="content-wrapper">
+            <div class="content-body d-flex">
+                @include('frontend/ecommerce-sidebar')
+                {{-- Include Startkit Content --}}
+                @yield('content')
 
-                    {{-- Include Startkit Content --}}
-                    @yield('content')
-
-                </div>
             </div>
         </div>
-        <!-- End: Content-->
+    </div>
+    <!-- End: Content-->
 
-        {{-- include default scripts --}}
-        @include('panels/scripts')
+    {{-- include default scripts --}}
+    @include('panels/scripts')
 
-    </body>
+</body>
+
 </html>
