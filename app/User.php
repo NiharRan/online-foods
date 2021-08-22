@@ -17,7 +17,26 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 'last_name', 'slug', 'avatar', 'role_id', 'email', 'address', 'password', 'status',
+    ];
+
+    public function getFullNameAttribute()
+    {
+        return $this->first_name . ' ' . $this->last_name;
+    }
+
+    public function getProfileImageAttribute()
+    {
+        return public_path("storage/users/$this->avatar");
+    }
+
+    public function getProfileUrlAttribute()
+    {
+        return route('profile', $this->slug);
+    }
+
+    protected $appends = [
+        'full_name', 'profile_image', 'profile_url'
     ];
 
     /**
@@ -37,4 +56,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

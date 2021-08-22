@@ -4,19 +4,19 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProductType extends Model
+class Role extends Model
 {
-     /**
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'slug', 'status',
+        'name', 'status',
     ];
 
-    public function products()
+    public function users()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(User::class);
     }
 }
