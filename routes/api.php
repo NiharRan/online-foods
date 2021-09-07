@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +26,14 @@ Route::group([
 
   Route::group([
     'middleware' => 'auth:api'
-  ], function() {
-      Route::get('logout', 'AuthController@logout');
-      Route::get('user', 'AuthController@user');
+  ], function () {
+    Route::get('logout', 'AuthController@logout');
+    Route::get('user', 'AuthController@user');
   });
-
 });
 
+Route::get('user', 'API\UserController@show');
+
+Route::get('products', 'API\ProductController@index');
+Route::get('categories', 'API\CategoryController@index');
+Route::get('brands', 'API\BrandController@index');

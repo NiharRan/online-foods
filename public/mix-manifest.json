@@ -1,4 +1,5 @@
 {
+    "/js/app.js": "/js/app.js",
     "/js/core/app.js": "/js/core/app.js",
     "/js/core/app-menu.js": "/js/core/app-menu.js",
     "/css/plugins/animate/animate.css": "/css/plugins/animate/animate.css",
@@ -101,6 +102,7 @@
     "/js/scripts/datatables/datatable.js": "/js/scripts/datatables/datatable.js",
     "/js/scripts/datatables/user-datatable.js": "/js/scripts/datatables/user-datatable.js",
     "/js/scripts/documentation.js": "/js/scripts/documentation.js",
+    "/js/scripts/editors/ckeditor.js": "/js/scripts/editors/ckeditor.js",
     "/js/scripts/editors/editor-quill.js": "/js/scripts/editors/editor-quill.js",
     "/js/scripts/extensions/const-plyr.js": "/js/scripts/extensions/const-plyr.js",
     "/js/scripts/extensions/context-menu.js": "/js/scripts/extensions/context-menu.js",

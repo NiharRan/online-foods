@@ -35,22 +35,14 @@ $configData = Helper::applClasses();
     class="vertical-layout vertical-menu-modern 1-column {{ $configData['blankPageClass'] }} {{ $configData['bodyClass'] }} {{ $configData['theme'] === 'light' ? '' : $configData['theme'] }} data-menu="
     vertical-menu-modern" data-col="1-column" data-layout="{{ $configData['theme'] }}">
     <!-- BEGIN: Content-->
-    <div class="app-content content ecommerce-application">
-        @include('panels.frontend.navbar')
-        <div class="content-wrapper">
-            <div class="content-body d-flex">
-                @include('frontend/ecommerce-sidebar')
-                {{-- Include Startkit Content --}}
-                @yield('content')
-
-            </div>
-        </div>
+    <div id="app">
+        @yield('content')
     </div>
     <!-- End: Content-->
 
     {{-- include default scripts --}}
     @include('panels/scripts')
-
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>

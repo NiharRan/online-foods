@@ -1,7 +1,7 @@
 {
   "menu": [
     {
-      "url": "dashboard-analytics",
+      "url": "/admin",
       "name": "Dashboard",
       "slug": "dashboard",
       "icon": "feather icon-home"
@@ -15,7 +15,7 @@
       "icon": "feather icon-home",
       "submenu": [
         {
-          "url": "dashboard-analytics",
+          "url": "/admin",
           "name": "Analytics",
           "icon": "feather icon-circle",
           "i18n": "nav.dashboard_analytics"
@@ -27,6 +27,36 @@
           "i18n": "nav.dashboard_ecommerce"
         }
       ]
+    },
+    {
+      "url": "/admin/products",
+      "name": "Products",
+      "slug": "admin/products",
+      "icon": "feather icon-tag"
+    },
+    {
+      "url": "/admin/stocks",
+      "name": "Stocks",
+      "slug": "admin/stocks",
+      "icon": "feather icon-tag"
+    },
+    {
+      "url": "/admin/product-types",
+      "name": "Product Types",
+      "slug": "admin/product-types",
+      "icon": "feather icon-tag"
+    },
+    {
+      "url": "/admin/brands",
+      "name": "Brands",
+      "slug": "admin/brands",
+      "icon": "feather icon-tag"
+    },
+    {
+      "url": "/admin/roles",
+      "name": "Roles",
+      "slug": "admin/roles",
+      "icon": "feather icon-tag"
     }
   ]
 }

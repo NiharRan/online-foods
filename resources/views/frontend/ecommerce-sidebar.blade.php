@@ -70,21 +70,6 @@
             </div>
             <!-- /Price Filter -->
             <hr>
-            <!-- /Price Slider -->
-            <div class="price-slider">
-                <div class="price-slider-title mt-1">
-                    <h6 class="filter-title mb-0">Slider</h6>
-                </div>
-                <div class="price-slider">
-                    <div class="price_slider_amount mb-2">
-                    </div>
-                    <div class="form-group">
-                        <div class="slider-sm my-1 range-slider" id="price-slider"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Price Range -->
-            <hr>
             <!-- Categories Starts -->
             <div id="product-categories">
                 <div class="product-category-title">
