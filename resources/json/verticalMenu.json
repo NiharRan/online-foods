@@ -41,6 +41,12 @@
       "icon": "feather icon-tag"
     },
     {
+      "url": "/admin/orders",
+      "name": "Orders",
+      "slug": "admin/orders",
+      "icon": "feather icon-tag"
+    },
+    {
       "url": "/admin/product-types",
       "name": "Product Types",
       "slug": "admin/product-types",

@@ -20,6 +20,7 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('home', require('./pages/Home.vue').default);
+Vue.component('checkout', require('./pages/Checkout.vue').default);
 Vue.component('pagination', require('./components/Pagination.vue').default);
 Vue.component('sidebar', require('./components/Sidebar.vue').default);
 Vue.component('navbar', require('./components/Navbar.vue').default);

@@ -24,6 +24,11 @@
         }
 
     </style>
+    @auth
+        <script>
+            window.auth = {!! $user->toJson() !!};
+        </script>
+    @endauth
 </head>
 
 {{-- {!! Helper::applClasses() !!} --}}

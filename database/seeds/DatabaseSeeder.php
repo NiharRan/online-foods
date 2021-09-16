@@ -41,6 +41,7 @@ class DatabaseSeeder extends Seeder
                 'email' => $user['email'] . $i . '@gmail.com',
                 'address' => $user['address'] . $i . ',sylhet',
                 'password' => Hash::make($user['password']),
+                'api_token' => Hash::make(Str::random(60)),
                 'role_id' => $user['role_id'],
                 'status' => rand(0, 1)
             ]);

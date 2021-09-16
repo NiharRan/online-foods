@@ -21,7 +21,7 @@
           >
             <ul class="nav navbar-nav">
               <li class="nav-item mobile-menu d-xl-none mr-auto">
-                <a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"
+                <a class="nav-link nav-menu-main menu-toggle hidden-xs" href="/"
                   ><i class="ficon feather icon-menu"></i
                 ></a>
               </li>
@@ -29,7 +29,7 @@
 
             <ul class="nav navbar-nav">
               <li class="nav-item d-none d-lg-block">
-                <a class="nav-link nav-link-expand">
+                <a class="nav-link nav-link-expand" href="/">
                   <span>Home</span>
                 </a>
               </li>
@@ -68,7 +68,22 @@
             </ul>
           </div>
           <ul class="nav navbar-nav float-right">
-            <li v-if="auth" class="dropdown dropdown-user nav-item">
+            <li v-if="auth" class="nav-item">
+              <a class="nav-link" href="/checkout" style="position: relative">
+                <i
+                  class="feather icon-shopping-cart"
+                  style="font-size: 18px"
+                ></i>
+                <span class="badge rounded-pill bg-danger badge-up">{{
+                  cart ? cart.length : ""
+                }}</span>
+              </a>
+            </li>
+            <li
+              v-if="auth"
+              class="dropdown dropdown-user nav-item"
+              @click.prevent="toggleProfileDropdown"
+            >
               <a
                 class="dropdown-toggle nav-link dropdown-user-link"
                 href="#"
@@ -87,7 +102,12 @@
                     width="40"
                 /></span>
               </a>
-              <div class="dropdown-menu dropdown-menu-right">
+              <div
+                class="dropdown-menu dropdown-menu-right"
+                :style="{
+                  display: isProfileDropdownVisible,
+                }"
+              >
                 <a class="dropdown-item" href="/profile"
                   ><i class="feather icon-user"></i> Profile</a
                 >
@@ -123,10 +143,18 @@
 
 <script>
 export default {
-  props: {},
+  props: {
+    cart: {
+      type: Array,
+      default: function () {
+        return [];
+      },
+    },
+  },
   data: function () {
     return {
-      auth: null,
+      auth: window.auth ?? null,
+      isProfileDropdownVisible: "none",
     };
   },
   methods: {
@@ -136,9 +164,11 @@ export default {
         this.auth = data;
       }
     },
+    toggleProfileDropdown: function () {
+      this.isProfileDropdownVisible =
+        this.isProfileDropdownVisible == "block" ? "none" : "block";
+    },
   },
-  created() {
-    this.fetchAuthInfo();
-  },
+  created() {},
 };
 </script>

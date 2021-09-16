@@ -1,6 +1,6 @@
 <template>
   <div class="app-content content ecommerce-application">
-    <navbar></navbar>
+    <navbar :cart="cart"></navbar>
     <div class="content-wrapper">
       <div class="content-body d-flex">
         <sidebar
@@ -145,10 +145,12 @@
                   <div class="wishlist">
                     <i class="fa fa-heart-o"></i> <span>Wishlist</span>
                   </div>
-                  <div class="cart">
+                  <div class="cart" v-if="auth">
                     <i class="feather icon-shopping-cart"></i>
-                    <span class="add-to-cart">Add to cart</span>
-                    <a href="app-ecommerce-checkout" class="view-in-cart d-none"
+                    <span class="add-to-cart" @click="addToCart(product.id)"
+                      >Add to cart</span
+                    >
+                    <a href="/checkout" class="view-in-cart d-none"
                       >View In Cart</a
                     >
                   </div>
@@ -181,6 +183,7 @@
 export default {
   data: function () {
     return {
+      auth: window.auth ?? null,
       products: null,
       categories: [],
       brands: [],
@@ -191,6 +194,7 @@ export default {
         brands: [],
         query: "",
       },
+      cart: null,
       display_class: "grid-view",
       is_grid_active: true,
     };
@@ -231,8 +235,25 @@ export default {
         this.brands = data;
       }
     },
+    addToCart: async function (product_id) {
+      const { data } = await axios.post("/cart/add", {
+        product_id,
+        user_id: window.auth.id,
+        quantity: 1,
+      });
+      if (data) {
+        this.fetchCartInfo();
+      }
+    },
+    fetchCartInfo: async function () {
+      const { data } = await axios.post("/cart-info");
+      if (data) {
+        this.cart = data;
+      }
+    },
   },
   created() {
+    this.fetchCartInfo();
     this.fetchCategories();
     this.fetchBrands();
     this.fetchProducts();

@@ -13,7 +13,7 @@ class ProfileController extends Controller
       ];
 
       $breadcrumbs = [
-          ['link'=>"dashboard-analytics",'name'=>"Home"], ['link'=>"dashboard-analytics",'name'=>"Pages"], ['name'=>"Profile"]
+          ['link'=>"/admin",'name'=>"Home"], ['link'=>"/admin",'name'=>"Pages"], ['name'=>"Profile"]
       ];
 
       return view('/pages/profile', [

@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', 'Shop')
+@section('title', 'Checkout')
 
 @section('vendor-style')
     <!-- Vendor css files -->
@@ -11,7 +11,7 @@
 @endsection
 @section('content')
 
-    <home></home>
+    <checkout></checkout>
 
 @endsection
 
