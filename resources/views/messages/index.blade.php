@@ -1,6 +1,6 @@
 @extends('layouts/contentLayoutMaster')
 
-@section('title', 'Orders')
+@section('title', 'Messages')
 
 @section('vendor-style')
     <!-- vendor css files -->
@@ -27,33 +27,32 @@
                                 <thead>
                                     <tr>
                                         <th>SN</th>
-                                        <th>Customer</th>
-                                        <th>Amount</th>
+                                        <th>Name</th>
+                                        <th>E-mail</th>
+                                        <th>Messages</th>
                                         <th>Status</th>
                                         <th>Created At</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($orders as $item)
+                                    @foreach ($messages as $item)
                                         <tr>
                                             <th>{{ $loop->index + 1 }}</th>
-                                            <td>{{ $item->user->full_name }}</td>
-                                            <td>{{ number_format($item->price, 2) }}</td>
+                                            <td>{{ $item->name }}</td>
+                                            <td>{{ $item->email }}</td>
+                                            <td>{{ $item->message }}</td>
                                             <td>
                                                 <span
-                                                    class="badge {{ $item->status_class }}">{{ $item->status_text }}</span>
+                                                    class="badge {{ $item->status == 1 ? 'badge-success' : 'badge-primary' }}">{{ $item->status == 0 ? 'New' : 'Viewed' }}</span>
                                             </td>
                                             <td>
                                                 {{ $item->created_at->diffForHumans(null, false, true) }}
                                             </td>
                                             <td>
                                                 <a class="btn btn-sm btn-info"
-                                                    href="{{ route('orders.edit', $item->id) }}"><i
-                                                        class="feather icon-edit"></i> Edit</a>
-                                                <a class="btn btn-sm btn-primary"
-                                                    href="{{ route('orders.show', $item->id) }}"><i
-                                                        class="feather icon-file"></i> Invoice</a>
+                                                    href="{{ route('messages.show', $item->id) }}"><i
+                                                        class="feather icon-eye"></i> View</a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -70,7 +69,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <nav>
-                    {{ $orders->render() }}
+                    {{ $messages->render() }}
                 </nav>
             </div>
         </div>

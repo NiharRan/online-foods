@@ -1,6 +1,6 @@
 @extends('layouts/contentLayoutMaster')
 
-@section('title', 'Update Order')
+@section('title', 'Order Invoice')
 
 @section('vendor-style')
     <!-- vendor css files -->
@@ -128,22 +128,6 @@
             <!-- Invoice Footer -->
             <div id="invoice-footer" class="text-right pt-3">
                 <p>Transfer the amounts to the business amount below. Please include invoice number on your check.
-                    @if ($order->status == 0)
-                        <p class="bank-details mb-0">
-                            <a href="{{ route('orders.update', $order->id) }}" class="btn btn-success">Confirm</a>
-                            <a href="{{ route('orders.cancel', $order->id) }}" class="btn btn-warning">Cancel</a>
-                        </p>
-                    @endif
-                    @if ($order->status == 3)
-                        <p class="bank-details mb-0">
-                            <a href="{{ route('orders.update', $order->id) }}" class="btn btn-success">Confirm</a>
-                        </p>
-                    @endif
-                    @if ($order->status == 1)
-                        <p class="bank-details mb-0">
-                            <a href="{{ route('orders.cancel', $order->id) }}" class="btn btn-warning">Cancel</a>
-                        </p>
-                    @endif
             </div>
             <!--/ Invoice Footer -->
 

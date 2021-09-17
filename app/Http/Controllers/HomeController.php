@@ -16,13 +16,6 @@ class HomeController extends Controller
             'sidebarCollapsed' => true
         ];
 
-        $products = Product::with(['brand', 'product_type'])
-            ->select('products.*')
-            ->join('stocks', 'stocks.product_id', '=', 'products.id', 'inner')
-            ->where('stocks.quantity', '>', 0)
-            ->where('products.status', 1)
-            ->orderBy('products.id', 'DESC')->paginate(5);
-
         $breadcrumbs = [
             ['link' => "/", 'name' => "Home"],
         ];
@@ -33,7 +26,66 @@ class HomeController extends Controller
             'pageConfigs' => $pageConfigs,
             'breadcrumbs' => $breadcrumbs,
             'user' => $user,
-            'products' => $products,
+        ]);
+    }
+
+
+
+    public function contactUs()
+    {
+        $pageConfigs = [
+            'sidebarCollapsed' => true
+        ];
+
+        $breadcrumbs = [
+            ['link' => "/", 'name' => "Home"],
+        ];
+
+        $user = User::with('shipping_address')->find(Auth::id());
+
+        return view('/frontend/contact-us', [
+            'pageConfigs' => $pageConfigs,
+            'breadcrumbs' => $breadcrumbs,
+            'user' => $user,
+        ]);
+    }
+
+    public function aboutUs()
+    {
+        $pageConfigs = [
+            'sidebarCollapsed' => true
+        ];
+
+        $breadcrumbs = [
+            ['link' => "/", 'name' => "Home"],
+        ];
+
+        $user = User::with('shipping_address')->find(Auth::id());
+
+        return view('/frontend/about-us', [
+            'pageConfigs' => $pageConfigs,
+            'breadcrumbs' => $breadcrumbs,
+            'user' => $user,
+        ]);
+    }
+
+    // User Profile
+    public function byProductTypes(Request $request)
+    {
+        $pageConfigs = [
+            'sidebarCollapsed' => true
+        ];
+
+        $breadcrumbs = [
+            ['link' => "/", 'name' => "Products"],
+        ];
+
+        $user = User::with('shipping_address')->find(Auth::id());
+
+        return view('/frontend/products', [
+            'pageConfigs' => $pageConfigs,
+            'breadcrumbs' => $breadcrumbs,
+            'user' => $user,
         ]);
     }
 }

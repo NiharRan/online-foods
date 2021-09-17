@@ -1,6 +1,6 @@
 <template>
   <div class="app-content content ecommerce-application">
-    <navbar :cart="cart"></navbar>
+    <navbar :cart="cart" :categories="categories"></navbar>
     <div class="content-wrapper">
       <div class="content-body d-flex">
         <div class="ecommerce">
@@ -306,6 +306,7 @@ export default {
   data: function () {
     return {
       cart: [],
+      categories: [],
       total: 0,
       is_cart_details_title_visible: true,
       is_cart_details_visible: true,
@@ -395,9 +396,16 @@ export default {
         this.fetchCartInfo();
       }
     },
+    fetchCategories: async function () {
+      const { data } = await axios.get("/api/categories");
+      if (data) {
+        this.categories = data;
+      }
+    },
   },
   created() {
     this.fetchCartInfo();
+    this.fetchCategories();
   },
 };
 </script>

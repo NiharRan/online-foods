@@ -33,35 +33,26 @@
                   <span>Home</span>
                 </a>
               </li>
-              <li class="dropdown nav-item">
+              <li
+                v-for="(category, key) in categories"
+                :key="key"
+                class="nav-item d-none d-lg-block"
+              >
                 <a
-                  class="dropdown-toggle nav-link"
-                  id="dropdown-flag"
-                  href="#"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
+                  class="nav-link nav-link-expand"
+                  :href="`/categories-wise-products/${category.id}`"
                 >
-                  <span>Products</span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdown-flag">
-                  <a class="dropdown-item" href="#"> Cloths</a>
-                  <a class="dropdown-item" href="#"> Foods</a>
-                  <a class="dropdown-item" href="#"> Medicine</a>
-                </div>
-              </li>
-              <li class="nav-item d-none d-lg-block">
-                <a class="nav-link nav-link-expand">
-                  <span>Services</span>
+                  <span>{{ category.name }}</span>
                 </a>
               </li>
+
               <li class="nav-item d-none d-lg-block">
-                <a class="nav-link nav-link-expand">
+                <a href="/about-us" class="nav-link nav-link-expand">
                   <span>About Author</span>
                 </a>
               </li>
               <li class="nav-item d-none d-lg-block">
-                <a class="nav-link nav-link-expand">
+                <a href="/contact-us" class="nav-link nav-link-expand">
                   <span>Contact Us</span>
                 </a>
               </li>
@@ -90,8 +81,7 @@
                 data-toggle="dropdown"
               >
                 <div class="user-nav d-sm-flex d-none">
-                  <span class="user-name text-bold-600">John Doe</span
-                  ><span class="user-status">Available</span>
+                  <span class="user-name text-bold-600">{{ auth.name }}</span>
                 </div>
                 <span
                   ><img
@@ -145,6 +135,12 @@
 export default {
   props: {
     cart: {
+      type: Array,
+      default: function () {
+        return [];
+      },
+    },
+    categories: {
       type: Array,
       default: function () {
         return [];

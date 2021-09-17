@@ -21,6 +21,10 @@ window.Vue = require('vue');
 
 Vue.component('home', require('./pages/Home.vue').default);
 Vue.component('checkout', require('./pages/Checkout.vue').default);
+Vue.component('product', require('./pages/Product.vue').default);
+Vue.component('products', require('./pages/Products.vue').default);
+Vue.component('about-us', require('./pages/AboutUs.vue').default);
+Vue.component('contact-us', require('./pages/ContactUs.vue').default);
 Vue.component('pagination', require('./components/Pagination.vue').default);
 Vue.component('sidebar', require('./components/Sidebar.vue').default);
 Vue.component('navbar', require('./components/Navbar.vue').default);

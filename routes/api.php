@@ -35,6 +35,7 @@ Route::group([
 Route::get('user', 'API\UserController@show');
 
 Route::get('products', 'API\ProductController@index');
+Route::get('products/{slug}', 'API\ProductController@show');
 Route::get('categories', 'API\CategoryController@index');
 Route::get('brands', 'API\BrandController@index');
-
+Route::post('/messages', 'MessageController@store');

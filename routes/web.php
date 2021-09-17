@@ -38,9 +38,18 @@ Route::group([
     Route::resource('stocks', 'StockController');
     Route::get('/orders', 'OrderController@index')->name('orders.index');
     Route::get('/orders/{id}/edit', 'OrderController@edit')->name('orders.edit');
+    Route::get('/orders/{id}/update', 'OrderController@update')->name('orders.update');
+    Route::get('/orders/{id}/show', 'OrderController@show')->name('orders.show');
+    Route::get('/orders/{id}/cancel', 'OrderController@cancel')->name('orders.cancel');
+
+    Route::get('/messages', 'MessageController@index')->name('messages.index');
+    Route::get('/messages/show/{id}', 'MessageController@show')->name('messages.show');
 });
 Route::get('/', 'HomeController@index');
+Route::get('/about-us', 'HomeController@aboutUs');
+Route::get('/contact-us', 'HomeController@contactUs');
 Route::get('/checkout', 'CheckoutController@index');
+Route::get('/categories-wise-products/{id}', 'HomeController@byProductTypes');
 
 Route::group([
     'middleware' => 'auth:web'

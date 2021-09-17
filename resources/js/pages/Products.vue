@@ -199,7 +199,7 @@ export default {
         brands: [],
         query: "",
       },
-      cart: null,
+      cart: [],
       display_class: "grid-view",
       is_grid_active: true,
     };
@@ -261,7 +261,10 @@ export default {
     this.fetchCartInfo();
     this.fetchCategories();
     this.fetchBrands();
-
+    let url = window.location.href;
+    let arr = url.split("/");
+    let category = arr[arr.length - 1];
+    this.search.category = category;
     this.fetchProducts();
   },
 };
