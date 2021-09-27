@@ -196,7 +196,7 @@ class ProductController extends Controller
             'details' => $request->details,
             'product_type_id' => $request->product_type_id,
             'brand_id' => $request->brand_id,
-            'status' => 1
+            'status' => $request->status
         ], $product->id);
 
         if ($request->hasFile('image')) {
@@ -236,5 +236,10 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+    }
+
+
+    public function byCategories(Request $request)
+    {
     }
 }

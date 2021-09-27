@@ -33,14 +33,6 @@
                     </div>
                   </div>
                   <div class="view-options">
-                    <select
-                      class="price-options form-control"
-                      id="ecommerce-price-options"
-                    >
-                      <option selected>Featured</option>
-                      <option value="1">Lowest</option>
-                      <option value="2">Highest</option>
-                    </select>
                     <div class="view-btn-option">
                       <button
                         class="btn btn-white view-btn grid-view-btn"
@@ -110,11 +102,6 @@
                   </div>
                   <div class="card-body">
                     <div class="item-wrapper">
-                      <div class="item-rating">
-                        <div class="badge badge-primary badge-md">
-                          <span>4</span> <i class="feather icon-star"></i>
-                        </div>
-                      </div>
                       <div>
                         <h6 class="item-price">${{ product.price }}</h6>
                       </div>
@@ -138,11 +125,6 @@
                 </a>
                 <div class="item-options text-center">
                   <div class="item-wrapper">
-                    <div class="item-rating">
-                      <div class="badge badge-primary badge-md">
-                        <span>4</span> <i class="feather icon-star"></i>
-                      </div>
-                    </div>
                     <div class="item-cost">
                       <h6 class="item-price">${{ product.price }}</h6>
                     </div>

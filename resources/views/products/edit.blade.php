@@ -78,7 +78,16 @@
                                 </div>
                                 <div class="form-group mb-2">
                                     <label for="">Description</label>
-                                    <textarea id="details">{{ $product->details }}</textarea>
+                                    <textarea id="details" name="details">{{ $product->details }}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Status</label>
+                                    <select name="status" id="status" class="form-control">
+                                        <option value="1" {{ $product->status == 1 ? 'selected' : '' }}>Active
+                                        </option>
+                                        <option value="0" {{ $product->status == 0 ? 'selected' : '' }}>Inactive
+                                        </option>
+                                    </select>
                                 </div>
                                 <div class="form-group mb-0">
                                     <button class="btn btn-success" type="submit"><i class="feather icon-file"></i>

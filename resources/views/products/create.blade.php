@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="form-group mb-2">
                                     <label for="">Description</label>
-                                    <textarea id="details"></textarea>
+                                    <textarea id="details" name="details"></textarea>
                                 </div>
                                 <div class="form-group mb-0">
                                     <button class="btn btn-success" type="submit"><i class="feather icon-file"></i>

@@ -2,7 +2,7 @@
   <div class="app-content content ecommerce-application">
     <navbar :cart="cart" :categories="categories"></navbar>
     <div class="content-wrapper">
-      <div class="content-body d-flex">
+      <div class="content-body">
         <section class="app-ecommerce-details" v-if="product">
           <div class="card">
             <div class="card-body">
@@ -33,16 +33,6 @@
                     <p class="text-primary font-medium-3 mr-1 mb-0">
                       ${{ product.price }}
                     </p>
-                    <span class="pl-1 font-medium-3 border-left">
-                      <i class="feather icon-star text-warning"></i>
-                      <i class="feather icon-star text-warning"></i>
-                      <i class="feather icon-star text-warning"></i>
-                      <i class="feather icon-star text-warning"></i>
-                      <i class="feather icon-star text-secondary"></i>
-                    </span>
-                    <span class="ml-50 text-dark font-medium-1"
-                      >424 ratings</span
-                    >
                   </div>
                   <hr />
                   <p>
@@ -62,6 +52,7 @@
                     </button>
                   </div>
                 </div>
+                <div class="col-md-12 col-sm-12" v-html="product.details"></div>
               </div>
             </div>
             <div class="card-body">
@@ -98,13 +89,6 @@
                       />
                     </div>
                     <div class="item-meta">
-                      <div class="product-rating">
-                        <i class="feather icon-star text-warning"></i>
-                        <i class="feather icon-star text-warning"></i>
-                        <i class="feather icon-star text-warning"></i>
-                        <i class="feather icon-star text-warning"></i>
-                        <i class="feather icon-star text-secondary"></i>
-                      </div>
                       <p class="text-primary mb-0">{{ item.price }}</p>
                     </div>
                   </div>

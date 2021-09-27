@@ -29,14 +29,11 @@ class ProductController extends Controller
 
         if ($request->has('price_limit') && $request->get('price_limit') != '') {
             $price_limit = explode(',', $request->get('price_limit'));
-            if ($price_limit[0] != 0 && $price_limit[1] != 0) {
-                if ($price_limit[0] == 0 && $price_limit[1] != 0) {
-                    $products = $products->where('products.price', '>=', $price_limit[1]);
-                } else if ($price_limit[0] != 0 && $price_limit[1] == 0) {
-                    $products = $products->where('products.price', '<=', $price_limit[1]);
-                } else {
-                    $products = $products->whereBetween('price', $price_limit);
-                }
+            if ($price_limit[1] > 0) {
+                $products = $products->where('products.price', '<=', $price_limit[1]);
+            }
+            if ($price_limit[0] > 0) {
+                $products = $products->where('products.price', '>=', $price_limit[0]);
             }
         }
 
