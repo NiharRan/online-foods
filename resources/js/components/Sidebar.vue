@@ -21,9 +21,10 @@
                 <input
                   type="radio"
                   name="price-range"
-                  checked
+                  checked="checked"
                   @change="searchByPrice(0, 0)"
-                  value="false"
+                  value="0"
+                  v-model="search.range"
                 />
                 <span class="vs-radio">
                   <span class="vs-radio--border"></span>
@@ -38,7 +39,8 @@
                   type="radio"
                   name="price-range"
                   @change="searchByPrice(0, 10)"
-                  value="false"
+                  value="10"
+                  v-model="search.range"
                 />
                 <span class="vs-radio">
                   <span class="vs-radio--border"></span>
@@ -53,7 +55,8 @@
                   type="radio"
                   name="price-range"
                   @change="searchByPrice(11, 100)"
-                  value="false"
+                  value="100"
+                  v-model="search.range"
                 />
                 <span class="vs-radio">
                   <span class="vs-radio--border"></span>
@@ -68,7 +71,8 @@
                   type="radio"
                   name="price-range"
                   @change="searchByPrice(101, 500)"
-                  value="false"
+                  value="500"
+                  v-model="search.range"
                 />
                 <span class="vs-radio">
                   <span class="vs-radio--border"></span>
@@ -83,7 +87,8 @@
                   type="radio"
                   name="price-range"
                   @change="searchByPrice(501, 0)"
-                  value="false"
+                  value="501"
+                  v-model="search.range"
                 />
                 <span class="vs-radio">
                   <span class="vs-radio--border"></span>
@@ -105,6 +110,23 @@
             class="list-unstyled categories-list"
             v-if="categories.length > 0"
           >
+          <li>
+              <span class="vs-radio-con vs-radio-primary py-25">
+                <input
+                  type="radio"
+                  name="category-filter"
+                  value=""
+                  v-model="search.category"
+                  checked="checked"
+                  @change="searchNow"
+                />
+                <span class="vs-radio">
+                  <span class="vs-radio--border"></span>
+                  <span class="vs-radio--circle"></span>
+                </span>
+                <span class="ml-50">All</span>
+              </span>
+            </li>
             <li v-for="(category, key) in categories" :key="key">
               <span class="vs-radio-con vs-radio-primary py-25">
                 <input
@@ -160,7 +182,7 @@
         <hr />
         <!-- Clear Filters Starts -->
         <div id="clear-filters">
-          <button class="btn btn-block btn-primary">CLEAR ALL FILTERS</button>
+          <button class="btn btn-block btn-primary" @click="clear">CLEAR ALL FILTERS</button>
         </div>
         <!-- Clear Filters Ends -->
       </div>
@@ -193,10 +215,19 @@ export default {
         brands: [],
         start: 0,
         end: 0,
+        range: 0
       },
     };
   },
   methods: {
+    clear: function () {
+      this.search.category = null;
+      this.search.brands = [];
+      this.search.start = 0;
+      this.search.end = 0;
+      this.search.range = 0;
+      this.searchNow();
+    },
     searchNow: function () {
       this.$emit("searchFromNabvar", this.search);
     },

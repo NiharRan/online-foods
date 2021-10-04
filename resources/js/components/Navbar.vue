@@ -106,15 +106,9 @@
                 >
 
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/login"
+                <a class="dropdown-item" @click="logout"
                   ><i class="feather icon-power"></i> Logout</a
                 >
-                <form
-                  id="logout-form"
-                  action="login"
-                  method="POST"
-                  style="display: none"
-                ></form>
               </div>
             </li>
             <li v-if="!auth" class="nav-item">
@@ -164,6 +158,12 @@ export default {
       this.isProfileDropdownVisible =
         this.isProfileDropdownVisible == "block" ? "none" : "block";
     },
+    logout: async function () {
+      const {data} = await axios.post('/api/logout');
+      if(data) {
+        location.reload();
+      }
+    }
   },
   created() {},
 };

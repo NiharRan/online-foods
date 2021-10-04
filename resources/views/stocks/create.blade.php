@@ -32,7 +32,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Name <strong class="text-danger">*</strong></label>
+                                    <label for="">Quantity <strong class="text-danger">*</strong></label>
                                     <input type="text" value="{{ old('quantity') }}" name="quantity"
                                         placeholder="Quantity" class="form-control">
                                 </div>

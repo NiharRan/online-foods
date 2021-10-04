@@ -188,7 +188,7 @@ class ProductController extends Controller
                 ->withInput();
         }
 
-        $product = Product::where('id', $product->id)->update([
+        Product::where('id', $product->id)->update([
             'title' => $request->title,
             'sub_title' => $request->sub_title,
             'price' => $request->price,
@@ -201,10 +201,10 @@ class ProductController extends Controller
 
         if ($request->hasFile('image')) {
 
-            if ($product->logo !== 'default.png') {
-                $originalImagePath = 'public/products/' . $product->logo;
-                $smallImagePath = 'public/products/thumbnail/small/' . $product->logo;
-                $mediumImagePath = 'public/products/thumbnail/medium/' . $product->logo;
+            if ($product->image !== 'default.png') {
+                $originalImagePath = 'public/products/' . $product->image;
+                $smallImagePath = 'public/products/thumbnail/small/' . $product->image;
+                $mediumImagePath = 'public/products/thumbnail/medium/' . $product->image;
 
                 Storage::delete($originalImagePath);
                 Storage::delete($smallImagePath);

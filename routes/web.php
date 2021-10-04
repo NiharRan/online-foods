@@ -75,5 +75,6 @@ Route::group([
 Route::get('products/{slug}', 'ProductProfileController@index')->name('products.profile');
 Route::get('brands/{slug}', 'BrandProfileController@index')->name('brands.profile');
 
+Route::post('/api/logout', 'ProfileController@logout');
 
 Auth::routes();

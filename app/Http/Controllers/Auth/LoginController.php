@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -66,5 +67,17 @@ class LoginController extends Controller
         $request->session()->invalidate();
 
         return $this->loggedOut($request) ?: redirect('/login');
+    }
+
+    public function redirectTo() {
+      $role = Auth::user()->role_id; 
+      switch ($role) {
+        case 1:
+          return '/admin';
+          break;
+        default:
+          return '/'; 
+        break;
+      }
     }
 }

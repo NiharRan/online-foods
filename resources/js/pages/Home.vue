@@ -129,9 +129,6 @@
                       <h6 class="item-price">${{ product.price }}</h6>
                     </div>
                   </div>
-                  <div class="wishlist">
-                    <i class="fa fa-heart-o"></i> <span>Wishlist</span>
-                  </div>
                   <div class="cart" v-if="auth">
                     <i class="feather icon-shopping-cart"></i>
                     <span class="add-to-cart" @click="addToCart(product.id)"
@@ -188,7 +185,7 @@ export default {
   },
   methods: {
     searchFromNabvar: function (search_data) {
-      this.search.category = search_data.category;
+      this.search.category = search_data.category ? search_data.category : '';
       this.search.brands = search_data.brands;
       this.search.price_limit = `${search_data.start},${search_data.end}`;
       this.fetchProducts();
