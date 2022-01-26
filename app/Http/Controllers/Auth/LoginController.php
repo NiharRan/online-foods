@@ -30,7 +30,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/verify';
 
     /**
      * Create a new controller instance.
@@ -70,14 +70,19 @@ class LoginController extends Controller
     }
 
     public function redirectTo() {
-      $role = Auth::user()->role_id; 
-      switch ($role) {
-        case 1:
-          return '/admin';
-          break;
-        default:
-          return '/'; 
-        break;
+      $verified = Auth::user()->verified; 
+      if ($verified == 0) {
+        return '/verify';
       }
+
+      // $role = Auth::user()->role_id; 
+      // switch ($role) {
+      //   case 1:
+      //     return '/admin';
+      //     break;
+      //   default:
+      //     return '/'; 
+      //   break;
+      // }
     }
 }

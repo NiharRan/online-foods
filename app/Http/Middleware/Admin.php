@@ -16,7 +16,13 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if (!Auth::check() || !Auth::user()->role_id == 1) {
+        if (!Auth::check()) {
+            return redirect('/');
+        }
+        if (Auth::user()->verified == 0) {
+            return redirect('/verify');
+        }
+        if (!Auth::user()->role_id == 1) {
             return redirect('/');
         }
         

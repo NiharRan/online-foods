@@ -17,8 +17,27 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'slug', 'avatar', 'role_id', 'email', 'address', 'password', 'status', 'api_token'
+        'first_name',
+        'last_name',
+        'slug',
+        'avatar',
+        'role_id',
+        'phone',
+        'email',
+        'address',
+        'password',
+        'status',
+        'api_token',
+
+        'verified',
+        'verification_code',
+        'expired_at'
     ];
+
+    public function routeNotificationForNexmo($notification)
+    {
+        return $this->phone;
+    }
 
     public function getFullNameAttribute()
     {

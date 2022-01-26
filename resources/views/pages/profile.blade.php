@@ -68,22 +68,24 @@
             <i class="feather icon-more-horizontal cursor-pointer"></i>
           </div>
           <div class="card-body">
-            <p>Tart I love sugar plum I love oat cake. Sweet roll caramels I love jujubes. Topping cake wafer.</p>
+            <p>Hello Everyone,
+            It's me Jabed Hussain Sujel. I am a Full Stack Web-developer. I love to develop Websites with new features and previously I have worked on various web development projects. This website now you are visiting is related with my academic course. RJ Fashion represents an online shop that I made for my Final Year Project Submission and I have plan to add new features to this site in near future. I am a very positive person and welcome new ideas from people. So, If you have any suggestions that you may think will add new dimension to my site then feel free to send an e-mail at : sr@rj-fashion.com I would love to work on your suggestions to make my website performance more effective and convenient to our users. 
+            Thank you!!!.</p>
             <div class="mt-1">
               <h6 class="mb-0">Joined:</h6>
-              <p>November 15, 2015</p>
+              <p>July 15, 2021</p>
             </div>
             <div class="mt-1">
               <h6 class="mb-0">Lives:</h6>
-              <p>New York, USA</p>
+              <p>Sylhet, Bangladesh</p>
             </div>
             <div class="mt-1">
               <h6 class="mb-0">Email:</h6>
-              <p>bucketful@fiendhead.org</p>
+              <p>jabedhossainsujel79@gmail.com</p>
             </div>
             <div class="mt-1">
               <h6 class="mb-0">Website:</h6>
-              <p>www.pixinvent.com</p>
+              <p>www.jhs.com</p>
             </div>
             <div class="mt-1">
               <button type="button" class="btn btn-sm btn-icon btn-primary mr-25 p-25"><i class="feather icon-facebook"></i></button>
@@ -102,7 +104,7 @@
                 <img src="{{ asset('images/profile/pages/page-09.jpg') }}" alt="avtar img holder" height="35" width="35">
               </div>
               <div class="user-page-info">
-                <p>Rockose</p>
+                <p>RJ Fashion</p>
                 <span class="font-small-2">Company</span>
               </div>
               <div class="ml-auto"><i class="feather icon-star"></i></div>
@@ -112,7 +114,7 @@
                 <img src="{{ asset('images/profile/pages/page-08.jpg') }}" alt="avtar img holder" height="35" width="35">
               </div>
               <div class="user-page-info">
-                <p>The Devil's</p>
+                <p>The RaySu</p>
                 <span class="font-small-2">Clothing Store</span>
               </div>
               <div class="ml-auto"><i class="feather icon-star"></i></div>
@@ -122,7 +124,7 @@
                 <img src="{{ asset('images/profile/pages/page-03.jpg') }}" alt="avtar img holder" height="35" width="35">
               </div>
               <div class="user-page-info">
-                <p>The Magician</p>
+                <p>The JHS</p>
                 <span class="font-small-2">Public Figure</span>
               </div>
               <div class="ml-auto"><i class="feather icon-star"></i></div>
@@ -162,7 +164,7 @@
                 <img src="{{ asset('images/profile/pages/page-05.jpg') }}" alt="avtar img holder" height="35" width="35">
               </div>
               <div class="user-page-info">
-                <p>Kylie Jenner</p>
+                <p>JHS Sujel</p>
                 <span class="font-small-2">Public Figure</span>
               </div>
               <div class="ml-auto"><i class="feather icon-star"></i></div>
@@ -172,7 +174,7 @@
                 <img src="{{ asset('images/profile/pages/page-01.jpg') }}" alt="avtar img holder" height="35" width="35">
               </div>
               <div class="user-page-info">
-                <p>RDJ</p>
+                <p>JHS</p>
                 <span class="font-small-2">Actor</span>
               </div>
               <div class="ml-auto"><i class="feather icon-star"></i></div>
@@ -182,7 +184,7 @@
                 <img src="{{ asset('images/profile/pages/page-06.jpg') }}" alt="avtar img holder" height="35" width="35">
               </div>
               <div class="user-page-info">
-                <p>Taylor Swift</p>
+                <p>Brown Bunde</p>
                 <span class="font-small-2">Music</span>
               </div>
               <div class="ml-auto"><i class="feather icon-star"></i></div>
@@ -200,8 +202,8 @@
                   <img src="{{ asset('images/portrait/small/avatar-s-12.jpg') }}" alt="avtar img holder" height="35" width="35">
                 </div>
                 <div class="user-page-info">
-                  <p class="text-bold-600 mb-0">Tiana Vercetti</p>
-                  <small>@tiana59</small>
+                  <p class="text-bold-600 mb-0">Md. Jabed Hossain Sujel</p>
+                  <small>@JabedSujel</small>
                   <div class="badge badge-primary badge-pill badge-sm p-0">
                     <i class="feather icon-check font-small-1"></i>
                   </div>
@@ -209,7 +211,7 @@
               </div>
               <p class="mb-0">I love cookie chupa chups sweet tart apple pie chocolate bar. Jelly-o oat cake chupa chups.</p>
               <p class="text-primary">#js #vuejs</p>
-              <small>12 Dec 2018</small>
+              <small>15 August 2021</small>
             </div>
             <div class="twitter-feed mt-2">
               <div class="d-flex justify-content-start align-items-center mb-1">
@@ -217,8 +219,8 @@
                   <img src="{{ asset('images/portrait/small/avatar-s-12.jpg') }}" alt="avtar img holder" height="35" width="35">
                 </div>
                 <div class="user-page-info">
-                  <p class="text-bold-600 mb-0">Tiana Vercetti</p>
-                  <small>@tiana59</small>
+                  <p class="text-bold-600 mb-0">Md. Jabed Hossain Sujel</p>
+                  <small>@JabedSujel</small>
                   <div class="badge badge-primary badge-pill badge-sm p-0">
                     <i class="feather icon-check font-small-1"></i>
                   </div>
@@ -226,7 +228,7 @@
               </div>
               <p class="mb-0">Carrot cake cake gummies I love I love tiramisu. Biscuit marzipan cookie lemon drops.</p>
               <p class="text-primary">#python</p>
-              <small>11 Dec 2018</small>
+              <small>11 Sep 2021</small>
             </div>
             <div class="twitter-feed mt-2">
               <div class="d-flex justify-content-start align-items-center mb-1">
@@ -234,15 +236,15 @@
                   <img src="{{ asset('images/portrait/small/avatar-s-12.jpg') }}" alt="avtar img holder" height="35" width="35">
                 </div>
                 <div class="user-page-info">
-                  <p class="text-bold-600 mb-0">Tiana Vercetti</p>
-                  <small>@tiana59</small>
+                  <p class="text-bold-600 mb-0">Md. Jabed Hossain Sujel</p>
+                  <small>@JabedSujel</small>
                   <div class="badge badge-primary badge-pill badge-sm p-0">
                     <i class="feather icon-check font-small-1"></i>
                   </div>
                 </div>
               </div>
               <p class="mb-0">I love cookie chupa chups sweet tart apple pie chocolate bar. Jelly-o oat cake chupa chups.</p>
-              <small>10 Dec 2018</small>
+              <small>10 Oct 2021</small>
             </div>
             <div class="twitter-feed mt-2">
               <div class="d-flex justify-content-start align-items-center mb-1">
@@ -250,8 +252,8 @@
                   <img src="{{ asset('images/portrait/small/avatar-s-12.jpg') }}" alt="avtar img holder" height="35" width="35">
                 </div>
                 <div class="user-page-info">
-                  <p class="text-bold-600 mb-0">Tiana Vercetti</p>
-                  <small>@tiana59</small>
+                  <p class="text-bold-600 mb-0">Md. Jabed Hossain Sujel</p>
+                  <small>@JabedSujel</small>
                   <div class="badge badge-primary badge-pill badge-sm p-0">
                     <i class="feather icon-check font-small-1"></i>
                   </div>
@@ -259,7 +261,7 @@
               </div>
               <p class="mb-0">Muffin candy caramels. I love caramels tiramisu jelly. Pie I love wafer. Chocolate cake lollipop tootsie roll cake.</p>
               <p class="text-primary">#django #vuejs</p>
-              <small>9 Dec 018</small>
+              <small>9 Nov 2021</small>
             </div>
           </div>
         </div>
@@ -272,8 +274,8 @@
                 <img src="{{ asset('images/profile/user-uploads/user-01.jpg') }}" alt="avtar img holder" height="45" width="45">
               </div>
               <div class="user-page-info">
-                <p class="mb-0">Leeanna Alvord</p>
-                <span class="font-small-2">12 Dec 2018 at 1:16 AM</span>
+                <p class="mb-0">Md. Jabed Hossain Sujel</p>
+                <span class="font-small-2">12 Dec 2021 at 1:16 AM</span>
               </div>
               <div class="ml-auto user-like text-danger"><i class="fa fa-heart"></i></div>
             </div>
@@ -320,7 +322,7 @@
                 <img src="{{ asset('images/portrait/small/avatar-s-6.jpg') }}" alt="Avatar" height="30" width="30">
               </div>
               <div class="user-page-info">
-                <h6 class="mb-0">Kitty Allanson</h6>
+                <h6 class="mb-0">Md. Jabed Hossain Sujel</h6>
                 <span class="font-small-2">orthoplumbate morningtide naphthaline exarteritis</span>
               </div>
               <div class="ml-auto cursor-pointer">
@@ -333,7 +335,7 @@
                 <img src="{{ asset('images/portrait/small/avatar-s-8.jpg') }}" alt="Avatar" height="30" width="30">
               </div>
               <div class="user-page-info">
-                <h6 class="mb-0">Jeanie Bulgrin</h6>
+                <h6 class="mb-0">Md. Jabed Hossain Sujel</h6>
                 <span class="font-small-2">blockiness pandemy metaxylene speckle coppy</span>
               </div>
               <div class="ml-auto cursor-pointer">
@@ -355,8 +357,8 @@
                 <img src="{{ asset('images/profile/user-uploads/user-01.jpg') }}" alt="avtar img holder" height="45" width="45">
               </div>
               <div class="user-page-info">
-                <h6 class="mb-0">Leeanna Alvord</h6>
-                <span class="font-small-2">11 Dec 2018 at 1:35 AM</span>
+                <h6 class="mb-0">Md. Jabed Hossain Sujel</h6>
+                <span class="font-small-2">11 Dec 2021 at 1:35 AM</span>
               </div>
               <div class="ml-auto user-like"><i class="feather icon-heart"></i></div>
             </div>
@@ -403,7 +405,7 @@
                 <img src="{{ asset('images/portrait/small/avatar-s-8.jpg') }}" alt="Avatar" height="30" width="30">
               </div>
               <div class="user-page-info">
-                <h6 class="mb-0">Darcey Nooner</h6>
+                <h6 class="mb-0">Md. Jabed Hossain Sujel</h6>
                 <span class="font-small-2">I love cupcake danish jujubes sweet.</span>
               </div>
               <div class="ml-auto cursor-pointer">
@@ -416,7 +418,7 @@
                 <img src="{{ asset('images/portrait/small/avatar-s-6.jpg') }}" alt="Avatar" height="30" width="30">
               </div>
               <div class="user-page-info">
-                <h6 class="mb-0">Lai Lewandowski</h6>
+                <h6 class="mb-0">Md. Jabed Hossain Sujel</h6>
                 <span class="font-small-2">Wafer I love brownie jelly bonbon tart apple pie</span>
               </div>
               <div class="ml-auto cursor-pointer">
@@ -438,8 +440,8 @@
                 <img src="{{ asset('images/profile/user-uploads/user-01.jpg') }}" alt="avtar img holder" height="45" width="45">
               </div>
               <div class="user-page-info">
-                <h6 class="mb-0">Leeanna Alvord</h6>
-                <span class="font-small-2">10 Dec 2018 at 5:35 AM</span>
+                <h6 class="mb-0">Md. Jabed Hossain Sujel</h6>
+                <span class="font-small-2">10 Dec 2021 at 5:35 AM</span>
               </div>
               <div class="ml-auto user-like"><i class="feather icon-heart"></i></div>
             </div>
@@ -486,7 +488,7 @@
                 <img src="{{ asset('images/portrait/small/avatar-s-8.jpg') }}" alt="Avatar" height="30" width="30">
               </div>
               <div class="user-page-info">
-                <h6 class="mb-0">Darcey Nooner</h6>
+                <h6 class="mb-0">Md. Jabed Hossain Sujel</h6>
                 <span class="font-small-2">I love cupcake danish jujubes sweet.</span>
               </div>
               <div class="ml-auto cursor-pointer">
@@ -499,7 +501,7 @@
                 <img src="{{ asset('images/portrait/small/avatar-s-6.jpg') }}" alt="Avatar" height="30" width="30">
               </div>
               <div class="user-page-info">
-                <h6 class="mb-0">Lai Lewandowski</h6>
+                <h6 class="mb-0">Md. Jabed Hossain Sujel</h6>
                 <span class="font-small-2">Wafer I love brownie jelly bonbon tart apple pie</span>
               </div>
               <div class="ml-auto cursor-pointer">
@@ -563,7 +565,7 @@
                 <img src="{{ asset('images/portrait/small/avatar-s-5.jpg') }}" alt="avtar img holder" height="35" width="35">
               </div>
               <div class="user-page-info">
-                <h6 class="mb-0">Carissa Dolle</h6>
+                <h6 class="mb-0">Rayhan</h6>
                 <span class="font-small-2">6 Mutual Friends</span>
               </div>
               <button type="button" class="btn btn-primary btn-icon ml-auto"><i class="feather icon-user-plus"></i></button>

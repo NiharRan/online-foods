@@ -26,19 +26,23 @@ class DatabaseSeeder extends Seeder
             'last_name' => 'Last',
             'slug' => 'first-last',
             'avatar' => 'default.png',
+            'phone' => '0176115218',
             'email' => 'user',
             'address' => 'add,dress,dd',
             'password' => '12345678',
             'role_id' => rand(1, 2)
         ];
 
-        for ($i=0; $i < 15; $i++) { 
+        for ($i=0; $i < 9; $i++) { 
             User::create([
                 'first_name' => $user['first_name'] . $i,
                 'last_name' => $user['last_name'] . $i,
                 'slug' => $user['slug']  . '-' . $i,
                 'avatar' => $user['avatar'],
+                'phone' => $user['phone'] . $i,
                 'email' => $user['email'] . $i . '@gmail.com',
+                'verification_code' => random_int(10000, 99999),
+                'expired_at' => time(),
                 'address' => $user['address'] . $i . ',sylhet',
                 'password' => Hash::make($user['password']),
                 'api_token' => Hash::make(Str::random(60)),

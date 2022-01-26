@@ -14,6 +14,8 @@
 
 // Route url
 
+use App\Notifications\VerificationSms;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 // Route Dashboards
 Route::group([
     'prefix' => 'admin',
-    'middleware' => 'auth:web,admin',
+    'middleware' => ['auth:web', 'admin', 'verify'],
 ], function () {
     Route::get('/', 'DashboardController@dashboardAnalytics');
     Route::get('/profile', 'ProfileController@show');
@@ -52,14 +54,22 @@ Route::get('/checkout', 'CheckoutController@index');
 Route::get('/categories-wise-products/{id}', 'HomeController@byProductTypes');
 
 Route::group([
-    'middleware' => 'auth:web'
+    'middleware' => ['auth:web']
+], function () {
+    Route::get('/verify', 'VerifyController@index')->name('verify.index');
+    Route::post('/verify/now', 'VerifyController@verify')->name('verify');
+    Route::post('/verify/resend', 'VerifyController@resend')->name('verify.resend');
+});
+
+Route::group([
+    'middleware' => ['auth:web', 'verify']
 ], function () {
     Route::get('/profile/{slug}', 'ProfileController@userProfile')->name('profile');
 });
 
 
 Route::group([
-    'middleware' => 'auth:web',
+    'middleware' => ['auth:web', 'verify'],
 ], function () {
     Route::post('/cart-info', 'API\CartController@userCart');
     Route::post('cart/add', 'API\CartController@addToCart');

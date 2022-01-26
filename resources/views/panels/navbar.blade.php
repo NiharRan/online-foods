@@ -114,7 +114,7 @@
                 <div class="avatar mr-50"><img src="{{ asset('images/portrait/small/avatar-s-8.jpg') }}" alt="png"
                         height="32" /></div>
                 <div class="search-data">
-                    <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
+                    <p class="search-data-title mb-0">JHS Sujel</p><small class="text-muted">UI designer</small>
                 </div>
             </div>
         </a>
@@ -125,7 +125,7 @@
                 <div class="avatar mr-50"><img src="{{ asset('images/portrait/small/avatar-s-1.jpg') }}" alt="png"
                         height="32" /></div>
                 <div class="search-data">
-                    <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd
+                    <p class="search-data-title mb-0">Rayhan Ahemd</p><small class="text-muted">FontEnd
                         Developer</small>
                 </div>
             </div>
@@ -137,7 +137,7 @@
                 <div class="avatar mr-50"><img src="{{ asset('images/portrait/small/avatar-s-14.jpg') }}" alt="png"
                         height="32" /></div>
                 <div class="search-data">
-                    <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing
+                    <p class="search-data-title mb-0">Md. Jabed Hossain Sujel</p><small class="text-muted">Digital Marketing
                         Manager</small>
                 </div>
             </div>
@@ -149,7 +149,7 @@
                 <div class="avatar mr-50"><img src="{{ asset('images/portrait/small/avatar-s-6.jpg') }}" alt="png"
                         height="32" /></div>
                 <div class="search-data">
-                    <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web Designer</small>
+                    <p class="search-data-title mb-0">Rayhan Ahmed</p><small class="text-muted">Web Designer</small>
                 </div>
             </div>
         </a>

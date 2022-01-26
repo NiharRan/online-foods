@@ -128,8 +128,20 @@
                     <div class="item-cost">
                       <h6 class="item-price">${{ product.price }}</h6>
                     </div>
+
                   </div>
-                  
+                   <div class="item-name list-item-price">
+                      <span
+                        >{{ product.product_type.name }} -
+                        {{ product.title }}</span
+                      >
+                      <p class="item-company">
+                        By
+                        <span class="company-name">{{
+                          product.brand.name
+                        }}</span>
+                      </p>
+                    </div>
                   <div class="cart" v-if="auth">
                     <i class="feather icon-shopping-cart"></i>
                     <span class="add-to-cart" @click="addToCart(product.id)"
@@ -249,3 +261,13 @@ export default {
   },
 };
 </script>
+
+<style>
+.list-view .item-price {
+  top: 0 !important;
+}
+
+.grid-view .list-item-price {
+  display: none;
+}
+</style>

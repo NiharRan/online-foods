@@ -12,6 +12,9 @@ class HomeController extends Controller
     // User Profile
     public function index(Request $request)
     {
+        if (Auth::check() && Auth::user()->verified == 0) {
+            return redirect()->route('verify.index');
+        }
         $pageConfigs = [
             'sidebarCollapsed' => true
         ];
